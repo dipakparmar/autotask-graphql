@@ -2,7 +2,7 @@ const { gql } = require('apollo-server-cloudflare');
 
 const typeDefs = gql`
 type Query {
-  contract(searchFieldName: String!, searchFieldValue: String!, searchOperation: filterOperationType!, MaxRecords: Int): ContractResponse 
+  contract(searchFieldName: String!, searchFieldValue: String!, searchOperation: filterOperationType, MaxRecords: Int): ContractResponse 
   apiVersionInformation: versionInformation
 }
 

@@ -21,12 +21,13 @@ class AutotaskAPI extends RESTDataSource {
 
     async getContract(searchFieldName, searchFieldValue, searchOperation, MaxRecords) {
         this.setBaseURL();
+        var op = searchOperation || 'eq';
         var body = {
             "MaxRecords": MaxRecords | 100,
             "IncludeFields": [],
             "Filter": [
                 {
-                    "op": String(searchOperation),
+                    "op": String(op),
                     "field": String(searchFieldName),
                     "value": String(searchFieldValue),
                     "udf": false,
