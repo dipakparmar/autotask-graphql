@@ -54,7 +54,7 @@ const handleRequest = async (request) => {
     } else if (graphQLOptions.forwardUnmatchedRequestsToOrigin) {
       return fetch(request)
     } else {
-      return new Response('Not found', { status: 404 })
+      return new Response('', { status: 302, headers: { Location: 'https://github.com/dipakparmar/autotask-graphql' } })
     }
   } catch (err) {
     return new Response(graphQLOptions.debug ? err : 'Something went wrong', {
