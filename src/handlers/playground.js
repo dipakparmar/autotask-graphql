@@ -17,7 +17,7 @@ const html = (baseEndpoint) => `
 
       gtag('config', 'G-4XG5Z1P39N');
     </script>
-    <script async defer data-website-id="c70ed6d7-de79-493f-8b2c-d8422f344db5" src="https://analytics.dipak.io/ua.js"></script>
+    <script async defer data-website-id="7e028c6e-2d13-425c-8e0c-4e58d8679318" src="https://analytics.dipak.io/ua.js"></script>
   </head>
 
   <body>
