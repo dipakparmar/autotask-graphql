@@ -42,6 +42,11 @@ class AutotaskAPI extends RESTDataSource {
         this.setBaseURL();
         return await this.get('VersionInformation', {}, {});
     }
+
+    async getContactByID(id) {
+        this.setBaseURL();
+        return await this.get(`V1.0/Contacts/${id}`, {}, {});
+    }
 }
 
 module.exports = AutotaskAPI;
