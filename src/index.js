@@ -1,6 +1,6 @@
-const apollo = require('./handlers/apollo')
-const playground = require('./handlers/playground')
-const setCors = require('./utils/setCors')
+import apollo from "./handlers/apollo";
+import playground from "./handlers/playground";
+import setCors from "./utils/setCors";
 
 const graphQLOptions = {
   // Set the path for the GraphQL server
@@ -19,7 +19,7 @@ const graphQLOptions = {
   // Enable CORS headers on GraphQL requests
   // Set to `true` for defaults (see `utils/setCors`),
   // or pass an object to configure each header
-  cors: true,
+  // cors: true,
   cors: {
     allowCredentials: 'true',
     allowHeaders: 'Content-type',
