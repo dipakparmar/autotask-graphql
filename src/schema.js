@@ -9,6 +9,7 @@ const typeDefs = gql`
       MaxRecords: Int
     ): ContractResponse
     contactByID(id: String): ContactByIDResponse
+    companyByID(id: String): CompanyByIDResponse
     apiVersionInformation: versionInformation
   }
 
@@ -115,8 +116,80 @@ const typeDefs = gql`
     title: String
     twitterUrl: String
     zipCode: String
+    userDefinedFields: [UserDefinedField]
   }
 
+  type CompanyByIDResponse {
+    item: CompanyItem
+  }
+
+  type CompanyItem {
+    id: Int
+    additionalAddressInformation: String
+    address1: String
+    address2: String
+    alternatePhone1: String
+    alternatePhone2: String
+    apiVendorID: String
+    assetValue: String
+    billToCompanyLocationID: String
+    billToAdditionalAddressInformation: String
+    billingAddress1: String
+    billingAddress2: String
+    billToAddressToUse: Int
+    billToAttention: String
+    billToCity: String
+    billToCountryID: Int
+    billToState: String
+    billToZipCode: String
+    city: String
+    classification: Int
+    companyCategoryID: Int
+    companyName: String
+    companyInt: String
+    companyType: Int
+    competitorID: String
+    countryID: Int
+    createDate: String
+    createdByResourceID: Int
+    currencyID: Int
+    fax: String
+    impersonatorCreatorResourceID: String
+    invoiceEmailMessageID: Int
+    invoiceMethod: String
+    invoiceNonContractItemsToParentCompany: String
+    invoiceTemplateID: Int
+    isActive: Boolean
+    isClientPortalActive: Boolean
+    isEnabledForComanaged: Boolean
+    isTaskFireActive: Boolean
+    isTaxExempt: Boolean
+    lastActivityDate: String
+    lastTrackedModifiedDateTime: String
+    marketSegmentID: String
+    ownerResourceID: Int
+    parentCompanyID: String
+    phone: String
+    postalCode: String
+    purchaseOrderTemplateID: String
+    quoteEmailMessageID: Int
+    quoteTemplateID: Int
+    sicCode: String
+    state: String
+    stockMarket: String
+    stockSymbol: String
+    surveyCompanyRating: String
+    taxID: String
+    taxRegionID: Int
+    territoryID: String
+    webAddress: String
+    userDefinedFields: [UserDefinedField]
+  }
+
+  type UserDefinedField {
+    name: String
+    value: String
+  }
 
   type versionInformation {
     apiVersions: [String]
