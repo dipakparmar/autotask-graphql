@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "prettier": "^2.4.1",
-    "webpack": "^5.56.0"
+    "webpack": "^5.88.0"
   },
   "scripts": {
     "dev": "wrangler dev",
